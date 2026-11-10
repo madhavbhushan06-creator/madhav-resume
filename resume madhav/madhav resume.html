@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Madhav Bhushan — IIM Bangalore BBA student and MAIMS B.Com (Honours) student with experience in sponsorship outreach, marketing and event management." />
+  <title>Madhav Bhushan | Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --primary: #3b5bdb;
+      --dark: #1e1e2f;
+      --light: #f5f7fa;
+      --accent: #ffb703;
+      --muted: #687784;
+      --line: #dce3e7
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      background: #e9edf5;
+      color: var(--dark);
+      font-family: Arial, sans-serif;
+      line-height: 1.65;
+      padding: 24px
+    }
+
+    a {
+      color: inherit
+    }
+
+    .site-shell {
+      width: min(1100px, 100%);
+      margin: 20px auto;
+      background: #fff;
+      display: grid;
+      grid-template-columns: 290px minmax(0, 1fr);
+      box-shadow: 0 12px 35px rgba(30, 30, 47, .12);
+      border-radius: 12px;
+      overflow: hidden
+    }
+
+    .sidebar {
+      background: var(--dark);
+      color: #fff;
+      padding: 42px 30px
+    }
+
+    .name {
+      font-size: 2rem;
+      line-height: 1.15;
+      letter-spacing: .03em;
+      text-transform: uppercase
+    }
+
+    .accent {
+      width: 52px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 5px;
+      margin: 20px 0 38px
+    }
+
+    .side-section {
+      margin-bottom: 28px
+    }
+
+    .side-section h2 {
+      font-size: .78rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border-bottom: 1px solid #ffffff35;
+      padding-bottom: 8px;
+      margin-bottom: 12px
+    }
+
+    .side-section p,
+    .side-section li {
+      font-size: .88rem;
+      color: #e4e5ee;
+      margin-bottom: 8px;
+      overflow-wrap: anywhere
+    }
+
+    .side-section a {
+      text-decoration: none
+    }
+
+    .side-section a:hover {
+      color: var(--accent)
+    }
+
+    .side-list {
+      list-style: none
+    }
+
+    .main {
+      padding: 48px 52px;
+      background: var(--light)
+    }
+
+    .topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 30px
+    }
+
+    .eyebrow {
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 8px
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+      color: var(--dark)
+    }
+
+    .hero-subtitle {
+      color: var(--muted);
+      margin-top: 10px
+    }
+
+    .contact-button {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 24px;
+      font-size: .85rem;
+      font-weight: 700;
+      white-space: nowrap
+    }
+
+    .contact-button:hover {
+      background: #2f4ab5
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 16px;
+      margin-bottom: 30px
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #596273;
+      font-size: .86rem;
+      font-weight: 700
+    }
+
+    nav a:hover {
+      color: var(--primary)
+    }
+
+    section {
+      scroll-margin-top: 20px;
+      margin-bottom: 32px
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--primary);
+      font-size: .9rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 14px
+    }
+
+    .section-heading:after {
+      content: "";
+      height: 2px;
+      background: #dfe3ef;
+      flex: 1
+    }
+
+    .profile-copy {
+      font-size: .98rem;
+      line-height: 1.8;
+      color: #4d5665;
+      max-width: 760px
+    }
+
+    .education-item,
+    .experience-item,
+    .leadership-item {
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--line)
+    }
+
+    .education-item:last-child,
+    .experience-item:last-child,
+    .leadership-item:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0
+    }
+
+    .item-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px
+    }
+
+    .item-title {
+      font-size: 1rem;
+      color: var(--dark)
+    }
+
+    .item-date {
+      font-size: .78rem;
+      color: var(--muted);
+      white-space: nowrap
+    }
+
+    .item-subtitle,
+    .role {
+      font-size: .9rem;
+      color: #68738a;
+      margin: 4px 0 8px
+    }
+
+    .details {
+      padding-left: 20px;
+      color: #515c6b;
+      font-size: .9rem
+    }
+
+    .details li {
+      margin: 5px 0
+    }
+
+    .details li::marker {
+      color: var(--primary)
+    }
+
+    .footer {
+      border-top: 1px solid var(--line);
+      padding-top: 16px;
+      margin-top: 34px;
+      color: #7a8492;
+      font-size: .8rem
+    }
+
+    @media(max-width:800px) {
+      body {
+        padding: 12px
+      }
+
+      .site-shell {
+        grid-template-columns: 1fr;
+        margin: 0
+      }
+
+      .sidebar {
+        padding: 30px
+      }
+
+      .side-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0 22px
+      }
+
+      .main {
+        padding: 32px
+      }
+    }
+
+    @media(max-width:520px) {
+      body {
+        padding: 0
+      }
+
+      .site-shell {
+        border-radius: 0
+      }
+
+      .sidebar {
+        padding: 28px 24px 12px
+      }
+
+      .side-grid {
+        grid-template-columns: 1fr
+      }
+
+      .main {
+        padding: 28px 24px
+      }
+
+      .topline {
+        align-items: flex-start;
+        flex-direction: column
+      }
+
+      .item-top {
+        display: block
+      }
+
+      .item-date {
+        display: block;
+        margin-top: 3px
+      }
+
+      nav {
+        gap: 12px 16px
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="site-shell">
+    <aside class="sidebar">
+      <h1 class="name">Madhav<br>Bhushan</h1>
+      <div class="accent"></div>
+
+      <div class="side-grid">
+        <section class="side-section" id="contact-details">
+          <h2>Contact</h2>
+          <p>Delhi, India</p>
+          <p><a href="tel:+919205302274">+91 92053 02274</a></p>
+          <p><a href="mailto:madhav.bhushan26@iimb.ac.in">madhav.bhushan26@iimb.ac.in</a></p>
+          <p><a href="mailto:madhavbhushan06@gmail.com">madhavbhushan06@gmail.com</a></p>
+        </section>
+
+        <section class="side-section">
+          <h2>Consulting-relevant strengths</h2>
+          <ul class="side-list">
+            <li>Corporate and sponsor outreach</li>
+            <li>Stakeholder communication</li>
+            <li>Marketing campaign execution</li>
+            <li>Event operations and coordination</li>
+            <li>Team collaboration</li>
+            <li>Business and market interest</li>
+          </ul>
+        </section>
+
+        <section class="side-section">
+          <h2>Areas of interest</h2>
+          <ul class="side-list">
+            <li>Strategy &amp; Consulting</li>
+            <li>Business Development</li>
+            <li>Market Positioning</li>
+            <li>Entrepreneurship</li>
+            <li>Finance &amp; Fintech</li>
+            <li>Corporate Relations</li>
+          </ul>
+        </section>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="topline">
+        <div>
+          <p class="eyebrow">Student profile</p>
+          <h2 class="hero-title">Business, strategy<br> &amp; execution.</h2>
+          <p class="hero-subtitle">BBA, Digital Business &amp; Entrepreneurship · IIM Bangalore</p>
+        </div>
+        <a class="contact-button" href="mailto:madhav.bhushan26@iimb.ac.in">Get in touch ↗</a>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a href="#about">Profile</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Campus experience</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <section id="about">
+        <h2 class="section-heading">Profile</h2>
+        <p class="profile-copy">First-year student pursuing a BBA in Digital Business &amp; Entrepreneurship at IIM
+          Bangalore alongside a B.Com (Honours) at MAIMS. Brings campus-level experience in sponsor outreach, marketing
+          initiatives and event execution. Interested in structured problem-solving, business growth, market positioning
+          and strategy.</p>
+      </section>
+
+      <section id="education">
+        <h2 class="section-heading">Education</h2>
+        <article class="education-item">
+          <div class="item-top">
+            <h3 class="item-title">Indian Institute of Management Bangalore (IIMB)</h3>
+            <span class="item-date">Class of 2029</span>
+          </div>
+          <p class="item-subtitle">BBA, Digital Business &amp; Entrepreneurship | First Year</p>
+        </article>
+        <article class="education-item">
+          <div class="item-top">
+            <h3 class="item-title">Maharaja Agrasen Institute of Management Studies (MAIMS)</h3>
+            <span class="item-date">Class of 2029/30</span>
+          </div>
+          <p class="item-subtitle">B.Com (Honours) | First Year</p>
+        </article>
+      </section>
+
+      <section id="experience">
+        <h2 class="section-heading">Relevant campus experience</h2>
+        <article class="experience-item">
+          <h3 class="item-title">COMMPACT | The Commerce Society of MAIMS</h3>
+          <p class="role">Sponsorship Team Member</p>
+          <ul class="details">
+            <li>Support corporate sponsor and external brand outreach for flagship campus initiatives.</li>
+            <li>Present partnership opportunities to prospective sponsors and brand representatives.</li>
+          </ul>
+          <p class="role">Marketing Team Member</p>
+          <ul class="details">
+            <li>Contribute to multi-channel campaigns and digital promotional material for society initiatives.</li>
+            <li>Help improve event visibility and student engagement through campaign execution.</li>
+          </ul>
+        </article>
+        <article class="experience-item">
+          <h3 class="item-title">KNOCKOUT | The Esports Society of MAIMS</h3>
+          <p class="role">Event Management Team Member</p>
+          <ul class="details">
+            <li>Coordinate tournament operations across logistics, match schedules and participant management.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="leadership">
+        <h2 class="section-heading">Additional leadership</h2>
+        <article class="leadership-item">
+          <h3 class="item-title">School Programs</h3>
+          <p class="role">Student Coordinator</p>
+          <ul class="details">
+            <li>Managed logistics, scheduling and on-ground execution for multiple school-wide events.</li>
+          </ul>
+        </article>
+        <article class="leadership-item">
+          <h3 class="item-title">Eco Club</h3>
+          <p class="role">Volunteer</p>
+          <ul class="details">
+            <li>Supported campus sustainability campaigns and environmental advocacy initiatives.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="contact">
+        <h2 class="section-heading">Contact</h2>
+        <p class="profile-copy">For collaborations, campus initiatives and professional opportunities, feel free to
+          reach out.</p>
+        <p><a href="tel:+919205302274">+91 92053 02274</a> <span aria-hidden="true"> · </span> <a
+            href="mailto:madhav.bhushan26@iimb.ac.in">madhav.bhushan26@iimb.ac.in</a> <span aria-hidden="true"> ·
+          </span> <a href="mailto:madhavbhushan06@gmail.com">madhavbhushan06@gmail.com</a></p>
+      </section>
+
+      <footer class="footer">© 2026 Madhav Bhushan</footer>
+    </main>
+  </div>
+</body>
+
+</html>
